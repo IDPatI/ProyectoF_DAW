@@ -3,10 +3,12 @@
 @section('title','Crear Cuenta')
 
 @section('Contenido-Principal')
+
+
 <div class="container mt-5">
         <div class="row">
             
-            <div class="col">
+            <div class="col" id="map">
 
             </div>
 
@@ -14,25 +16,49 @@
             <div class="col">
                 <h2 class="fw-bolt text-center py-1">Registrate</h2>
 
-                <form action="#">
+                <form  method="POST">
+
+                    @csrf
+
                     <div class="mb-4">
                         <label for="text" class="form-label">Nombres</label>
-                        <input type="text" name="text" id="" class="form-control">
+                        <input type="text" name="name" id="" class="form-control">
                     </div>
+
+                    @error('name')
+                        <p class="alert alert-danger" role="alert">* {{$message}}</p>
+                    @enderror
 
                     <div class="mb-4">
                         <label for="text" class="form-label">Apellidos</label>
-                        <input type="text" name="text" id="" class="form-control">
+                        <input type="text" name="apellido" id="" class="form-control">
                     </div>
+
+                    @error('apellido')
+                        <p class="alert alert-danger" role="alert">* {{$message}}</p>
+                    @enderror
 
                     <div class="mb-4">
                         <label for="email" class="form-label">Correo</label>
                         <input type="email" name="email" id="" class="form-control">
                     </div>
 
+                    @error('email')
+                        <p class="alert alert-danger" role="alert">* {{$message}}</p>
+                    @enderror
+
                     <div class="mb-4">
                         <label for="password" class="form-label">Contraseña</label>
                         <input type="password" name="password" id="" class="form-control">
+                    </div>
+                    
+                    @error('password')
+                        <p class="alert alert-danger" role="alert">* {{$message}}</p>
+                    @enderror
+
+                    <div class="mb-4">
+                        <label for="password" class="form-label">Confirmar Contraseña</label>
+                        <input type="password" name="password_confirmation" id="" class="form-control">
                     </div>
 
                     <div class="d-grid">

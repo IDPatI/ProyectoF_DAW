@@ -11,15 +11,21 @@
 
             <div class="col text-center">
                 <div class="mb-4">
-                    <label for="text" class="form-label">Animando a la gente a unirse</label>
+                    <label for="text" class="form-label fw-bold">Animando a la gente a unirse</label>
                 </div>
 
                 <div class="mb-4">
-                    <label for="text" class="form-label">¿Quienes somos?</label>
+                    <label for="text" class="form-label fw-bold">¿Quienes somos?</label>
+                    <label for="text" class="form-label">Somos una empresa cuya razón social esta dirigida
+                        al reporte de baches de una colonia determinada.<br>
+                        Nos caracterizamos por brindar un servicio fundamentado en el bienestar y la comodidad 
+                        a las soluciones de reporte de baches.
+                    </label>
+                    
                 </div>
 
                 <div class="mb-4">
-                    <label for="text" class="form-label">Cambia tu mundo y usa nuestra plataforma</label>
+                    <label for="text" class="form-label fw-bold">Cambia tu mundo y usa nuestra plataforma</label>
                 </div>
             </div>
         </div>
