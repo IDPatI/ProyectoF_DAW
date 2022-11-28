@@ -1,7 +1,5 @@
-@extends('layouts.plantilla')
 
 @section('title','Nosotro')
-
 @section('Contenido-Principal')
     <div class="container mt-5">
         <div class="row">

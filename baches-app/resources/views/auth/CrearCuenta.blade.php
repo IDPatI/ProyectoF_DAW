@@ -16,12 +16,11 @@
             <div class="col">
                 <h2 class="fw-bolt text-center py-1">Registrate</h2>
 
-                <form  method="POST">
+                <form  method="POST" action="{{route('crearCuenta')}}">
 
                     @csrf
-
                     <div class="mb-4">
-                        <label for="text" class="form-label">Nombres</label>
+                        <label for="text" class="form-label">Nombre(s)</label>
                         <input type="text" name="name" id="" class="form-control">
                     </div>
 
@@ -30,7 +29,7 @@
                     @enderror
 
                     <div class="mb-4">
-                        <label for="text" class="form-label">Apellidos</label>
+                        <label for="text" class="form-label">Apellido(s)</label>
                         <input type="text" name="apellido" id="" class="form-control">
                     </div>
 

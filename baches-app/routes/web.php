@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use GuzzleHttp\Middleware;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,33 +21,40 @@ use GuzzleHttp\Middleware;
 
 //Route::get('/', HomeController::class)->name('inicio');
 
-Route::get('/', function(){
-    return view('Home');
-})->name('inicio')
-->middleware('auth');
+Route::get('/', function(){return view('layouts.Inicio');})->name('inicio')->middleware("auth");
 
+//Route::view('inicio', 'InicioConLog')->middleware("auth");
+
+
+
+Route::view('Us','Us')->name('nosotros');
 
 Route::get('/inicioConLog',[SessionsController::class,'create'])
 ->middleware('guest')
 ->name('inicioConLog');
 
 
-Route::post('/inicioConLog',[SessionsController::class,'store'])->name('inicioConLog');
 
-Route::get('/cerrarSesion',[SessionsController::class,'destroy'])->name('inicioConLog.destroy');
+//iniciarSecion
+Route::post('/iniciarSecion',[SessionsController::class,'store'])->name('iniciarSecion');
+
+Route::get('/cerrarSesion',[SessionsController::class,'destroy'])->name('cerrarSecion');
 
 Route::get('/admin',[AdminController::class, 'index'])
     ->middleware('auth.admin')
     ->name('admin');
 
 
-Route::get('/crearCuenta',[RegisterController::class,'create'])
+
+
+//Crear cuenta
+Route::get('/unirse',[UsuarioController::class,'crearCuenta'])
 ->middleware('guest')
 ->name('crearCuenta');
 
-Route::post('/crearCuenta',[RegisterController::class,'store'])->name('crearCuenta');
+Route::post('/unirse',[UsuarioController::class,'create'])->name('crearCuenta');
 
-Route::view('Us','Us')->name('nosotros');
+
 
 
 

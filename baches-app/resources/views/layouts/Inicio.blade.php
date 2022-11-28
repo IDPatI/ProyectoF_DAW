@@ -3,11 +3,7 @@
 @section('title','inicio')
 
 @section('Contenido-Principal')
-
-
-
 </script>
-
     <div class="container mt-5 formulario">
         <div class="row">
             <div class="col" id="map">
@@ -18,7 +14,7 @@
             <div class="col">
                 <h2 class="fw-bolt text-center py-5">Bienvenido</h2>
 
-                <form action="" method="POST" >
+                <form action="{{route('iniciarSecion')}}" method="POST" >
 
                     @csrf
 
