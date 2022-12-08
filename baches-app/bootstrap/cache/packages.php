@@ -11,6 +11,13 @@
       'PDF' => 'Barryvdh\\DomPDF\\Facade\\Pdf',
     ),
   ),
+  'kitloong/laravel-app-logger' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'KitLoong\\AppLogger\\AppLoggerServiceProvider',
+    ),
+  ),
   'knuckleswtf/scribe' => 
   array (
     'providers' => 
@@ -58,6 +65,24 @@
     'providers' => 
     array (
       0 => 'Termwind\\Laravel\\TermwindServiceProvider',
+    ),
+  ),
+  'rakutentech/laravel-request-docs' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Rakutentech\\LaravelRequestDocs\\LaravelRequestDocsServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'LaravelRequestDocs' => 'Rakutentech\\LaravelRequestDocs\\LaravelRequestDocsFacade',
+    ),
+  ),
+  'spatie/laravel-http-logger' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\HttpLogger\\HttpLoggerServiceProvider',
     ),
   ),
   'spatie/laravel-ignition' => 

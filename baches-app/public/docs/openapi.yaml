@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: Laravel
+  title: 'Documentacion App Baches'
   description: ''
   version: 1.0.0
 servers:
